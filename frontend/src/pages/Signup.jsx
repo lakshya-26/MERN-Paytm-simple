@@ -11,6 +11,7 @@ const Signup = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   return (
@@ -37,6 +38,13 @@ const Signup = () => {
             onChange={(e) => {
               setUsername(e.target.value);
             }}
+            placeholder="doe24"
+            label={"username"}
+          />
+          <InputBox
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             placeholder="john@gmail.com"
             label={"Email"}
           />
@@ -56,6 +64,7 @@ const Signup = () => {
                     username,
                     firstName,
                     lastName,
+                    email,
                     password,
                   }
                 );
